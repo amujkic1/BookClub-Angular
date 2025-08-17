@@ -1,0 +1,11 @@
+<section class="books-section">
+  <h2>Naše preporuke</h2>
+  <div class="books-grid">
+    <div class="book-card" *ngFor="let book of books()">
+      <img [src]="book.coverImageUrl" [alt]="book.title">
+      <h3>{{ book.title }}</h3>
+      <p class="author">by {{ book.author }}</p>
+      <button (click)="viewDetails(book.bookId)">View Details</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Prijava</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Unesite email" [(ngModel)]="email" name="email" required>
+
+      <label for="password">Lozinka</label>
+      <input type="password" id="password" placeholder="Unesite lozinku" [(ngModel)]="password" name="password" required>
+
+      <button type="submit" class="btn primary">Prijavi se</button>
+    </form>
+
+    <p class="switch">
+      Nemaš nalog?
+      <a href="/register">Registruj se</a>
+    </p>
+  </div>
+</div>

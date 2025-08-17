@@ -1,3 +1,104 @@
-main {
-  padding: 1rem;
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') center/cover no-repeat;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: black;
+}
+
+.hero p {
+  color: black;
+}
+
+.btn-main {
+  background-color: #6C4E3D;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* KNJIGA MJESECA */
+.featured-book {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #F8F5F2;
+}
+
+.book-of-the-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.book-of-the-month img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.book-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.btn-secondary {
+  background-color: #A77E58;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* BENEFITI */
+.benefits {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.benefit-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.benefit-item {
+  background-color: #EAD7C3;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #ccc;
 }

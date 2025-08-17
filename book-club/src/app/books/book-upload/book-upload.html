@@ -1,0 +1,5 @@
+<input type="file" (change)="onFileSelected($event)" />
+<div *ngIf="downloadURL">
+  <p>Slika uploadovana:</p>
+  <img [src]="downloadURL" width="200" />
+</div>

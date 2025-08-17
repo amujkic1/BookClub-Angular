@@ -1,0 +1,88 @@
+.forum-hero {
+  background-color: #f3f0ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.forum-hero h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.forum-hero p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.new-topic-btn {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.new-topic-btn:hover {
+  background-color: #6D28D9;
+}
+
+.forum-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.topic-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+}
+
+.topic-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.topic-card .meta {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.forum-sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.forum-sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.forum-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.forum-sidebar li {
+  padding: 5px 0;
+  font-size: 0.95rem;
+}
