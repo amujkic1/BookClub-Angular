@@ -27,14 +27,16 @@ export class BooksComponent {
         })
       )
       .subscribe((books) => {
+        console.log('books', books)
         this.books.set(books)
       })
     }
 
-    viewDetails(bookId: number): void {
+    viewDetails(bookId: string): void {
+      console.log('klik na knjigu', bookId)
       this.booksService.getBookById(bookId)
       .subscribe(book => {
-        console.log("detalji knjige")
+        console.log("detalji knjige", book)
         this.router.navigate(['/books', bookId]);
       })
     }

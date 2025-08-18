@@ -5,7 +5,7 @@
       <img [src]="book.coverImageUrl" [alt]="book.title">
       <h3>{{ book.title }}</h3>
       <p class="author">by {{ book.author }}</p>
-      <button (click)="viewDetails(book.bookId)">View Details</button>
+      <button (click)="viewDetails(book._id!)">View Details</button>
     </div>
   </div>
 </section>

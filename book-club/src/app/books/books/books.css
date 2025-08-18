@@ -16,6 +16,7 @@
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .book-card {
@@ -24,6 +25,10 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   padding: 20px;
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 40%;
 }
 
 .book-card:hover {
@@ -53,6 +58,7 @@
 }
 
 .book-card button {
+  bottom: 10px;
   background-color: #8B5CF6;
   color: white;
   border: none;
@@ -61,6 +67,7 @@
   cursor: pointer;
   font-family: 'Lato', sans-serif;
   transition: background-color 0.3s;
+  margin-top: auto;
 }
 
 .book-card button:hover {

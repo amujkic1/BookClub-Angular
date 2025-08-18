@@ -1,5 +1,43 @@
+<!--
 <input type="file" (change)="onFileSelected($event)" />
 <div *ngIf="downloadURL">
   <p>Slika uploadovana:</p>
   <img [src]="downloadURL" width="200" />
 </div>
+-->
+
+<form class="book-upload-form" (ngSubmit)="onSubmit()" #bookForm="ngForm">
+
+  <h2>Upload nove knjige</h2>
+
+  <label for="title">Naslov</label>
+  <input type="text" id="title" name="title" [(ngModel)]="book.title" required />
+
+  <label for="author">Autor</label>
+  <input type="text" id="author" name="author" [(ngModel)]="book.author" required />
+
+  <label for="publisher">Izdavač</label>
+  <input type="text" id="publisher" name="publisher" [(ngModel)]="book.publisher" />
+
+  <label for="year">Godina</label>
+  <input type="number" id="year" name="year" [(ngModel)]="book.year" min="0" />
+
+  <label for="genre">Žanr</label>
+  <input type="text" id="genre" name="genre" [(ngModel)]="book.genre" />
+
+  <label for="pages">Broj stranica</label>
+  <input type="number" id="pages" name="pages" [(ngModel)]="book.pages" min="1" />
+
+  <label for="summary">Sažetak</label>
+  <textarea id="summary" name="summary" [(ngModel)]="book.summary" rows="4"></textarea>
+
+  <label for="coverImage">Naslovna slika</label>
+  <input type="file" id="coverImage" (change)="onFileSelected($event)" />
+
+  <div *ngIf="downloadURL" class="preview">
+    <p>Slika uploadovana:</p>
+    <img [src]="downloadURL" width="200" />
+  </div>
+
+  <button type="submit" [disabled]="!bookForm.form.valid">Upload knjige</button>
+</form>

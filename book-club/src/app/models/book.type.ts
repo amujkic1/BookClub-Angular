@@ -1,12 +1,12 @@
 export interface Book {
-  bookId: number;
+  _id?: string;
   title: string;
   author: string;
-  coverImageUrl?: string;
-  genre?: string;
   publisher?: string;
-  year?: number;
-  pages?: number;
-  rating?: number;
-  description?: string;
+  year?: number | null;
+  genre?: string;
+  summary?: string;
+  coverImageUrl?: string;
+  pages?: number | null;
+  rating?: number | null;
 }
