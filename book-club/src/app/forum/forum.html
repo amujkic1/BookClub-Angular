@@ -1,7 +1,8 @@
 <section class="forum-hero">
   <h1>Book Club Forum</h1>
   <p>Diskutuj o knjigama, piscima i događajima sa zajednicom</p>
-  <button class="new-topic-btn">+ Nova Tema</button>
+  <button class="new-topic-btn" (click)="showModal()">+ Nova Tema</button>
+  <app-thread-modal *ngIf="isModalVisible" (close)="hideModal()" (newTopic)="addTopic($event)"></app-thread-modal>
 </section>
 
 <div class="forum-layout">
@@ -9,7 +10,7 @@
   <div class="topics-list">
     <div class="topic-card" *ngFor="let topic of topics">
       <h3>{{ topic.title }}</h3>
-      <p class="meta">Autor: {{ topic.author }} • {{ topic.replies }} odgovora • {{ topic.lastReply }}</p>
+      <p class="meta">Autor: {{ topic.authorId.username }} • at {{ topic.createdAt }}</p>
     </div>
   </div>
 

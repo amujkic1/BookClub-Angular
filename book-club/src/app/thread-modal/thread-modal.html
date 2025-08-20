@@ -1,0 +1,17 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Započnite novu temu</h2>
+
+    <form (ngSubmit)="createTopic()">
+      <div class="form-group">
+        <label for="title">Naslov</label>
+        <input type="text" id="title" name="title" [(ngModel)]="topic" required />
+      </div>
+
+      <div class="modal-actions">
+        <button type="submit" class="btn-primary">Objavi temu</button>
+        <button type="button" class="btn-secondary" (click)="closeModal()">Otkaži</button>
+      </div>
+    </form>
+  </div>
+</div>
