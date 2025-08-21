@@ -14,9 +14,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
-  max-width: 1200px;
   margin: 0 auto;
-  align-items: stretch;
 }
 
 .book-card {
@@ -28,7 +26,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 40%;
 }
 
 .book-card:hover {
