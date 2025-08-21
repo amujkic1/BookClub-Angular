@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BooksService } from '../../services/books';
 import { Book } from '../../models/book.type';
 import { catchError } from 'rxjs';
-import { Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-books',
@@ -33,10 +33,8 @@ export class BooksComponent {
     }
 
     viewDetails(bookId: string): void {
-      console.log('klik na knjigu', bookId)
       this.booksService.getBookById(bookId)
       .subscribe(book => {
-        console.log("detalji knjige", book)
         this.router.navigate(['/books', bookId]);
       })
     }

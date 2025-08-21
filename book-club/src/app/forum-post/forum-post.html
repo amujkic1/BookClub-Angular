@@ -1,0 +1,35 @@
+<section class="post-hero">
+  <h2>{{ thread()?.title }}</h2>
+  <p class="meta">Autor: {{ thread()?.authorId?.username }} • {{ thread()?.createdAt | date:'short' }}</p>
+</section>
+
+<div class="post-layout">
+  <!-- Glavni sadržaj -->
+  <div class="post-content">
+    <article class="post-body">
+      <p>{{thread()?.content}}</p>
+    </article>
+
+    <section class="comments">
+      <h3>Komentari</h3>
+      <div class="comment-card" *ngFor="let comment of comments()">
+        <p class="comment-author">{{ comment.authorId.username }}:</p>
+        <p class="comment-text">{{ comment.content }}</p>
+        <p class="comment-meta">{{ comment.createdAt | date:'short' }}</p>
+      </div>
+
+      <div class="add-comment">
+        <textarea [(ngModel)]="newComment" placeholder="Napiši komentar..."></textarea>
+        <button class="comment-btn" (click)="addComment(newComment)">Dodaj komentar</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="post-sidebar">
+    <h3>Povezane teme</h3>
+    <ul>
+      <li *ngFor="let related of relatedTopics">{{ related }}</li>
+    </ul>
+  </aside>
+</div>

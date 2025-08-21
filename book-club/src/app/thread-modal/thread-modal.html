@@ -8,6 +8,11 @@
         <input type="text" id="title" name="title" [(ngModel)]="topic" required />
       </div>
 
+      <div class="form-group">
+        <label for="content">Sadržaj</label>
+        <textarea id="content" name="content" [(ngModel)]="content" required rows="6" placeholder="Unesite sadržaj teme..."></textarea>
+      </div>
+
       <div class="modal-actions">
         <button type="submit" class="btn-primary">Objavi temu</button>
         <button type="button" class="btn-secondary" (click)="closeModal()">Otkaži</button>

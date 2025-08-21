@@ -6,6 +6,7 @@ import { BookDetails } from './books/book-details/book-details';
 import { BookUpload } from './books/book-upload/book-upload';
 import { Login } from './auth/login/login';
 import { Register } from './auth/register/register';
+import { ForumPost } from './forum-post/forum-post';
 
 export const routes: Routes = [
     { path: '', component: Login },       
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'details', component: BookDetails},
     { path: 'upload', component: BookUpload},
     { path: 'register', component: Register},
-    { path: 'books/:id', component: BookDetails }
+    { path: 'books/:id', component: BookDetails },
+    { path: 'forum/:id', component: ForumPost }
 ];

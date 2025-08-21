@@ -22,7 +22,6 @@ export class BookDetails {
 
     if (id) {
       this.booksService.getBookById(id).subscribe(book => {
-        console.log('book ', book)
         this.book.set(book);
       });
     }

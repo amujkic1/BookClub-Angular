@@ -82,3 +82,7 @@
   background-color: #ccc;
   transform: translateY(-1px);
 }
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
