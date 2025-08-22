@@ -1,6 +1,7 @@
 .books-section {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background: url('../../assets/1.jpg') no-repeat center center fixed;
+  background-size: cover; 
   text-align: center;
 }
 

@@ -7,6 +7,7 @@ import { BookUpload } from './books/book-upload/book-upload';
 import { Login } from './auth/login/login';
 import { Register } from './auth/register/register';
 import { ForumPost } from './forum-post/forum-post';
+import { Profile } from './profile/profile';
 
 export const routes: Routes = [
     { path: '', component: Login },       
@@ -17,5 +18,6 @@ export const routes: Routes = [
     { path: 'upload', component: BookUpload},
     { path: 'register', component: Register},
     { path: 'books/:id', component: BookDetails },
-    { path: 'forum/:id', component: ForumPost }
+    { path: 'forum/:id', component: ForumPost },
+    { path: 'profile', component: Profile}
 ];
